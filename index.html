@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="javascript/addcontacts.js"></script>
 	</head>
 	<body>
+		<p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
 		<form id="addContact">	
 			<label for="first">First</label><br/>
 			<input type="text" for "first" /><br/>
@@ -22,7 +23,7 @@
 				<option value="Work">Work</option>
 			</select><br />
 		</form>		
-		<button type="submit" form="addContact" id="btnSave" onclick="saveContact()">Save Contact</button>&emsp;
+		<button type="submit" form="addContact" id="btnSave" onclick="saveContact(); return false;">Save Contact</button>&emsp;
 		<button type="reset">Clear</button>	
 	</body>
 </html>

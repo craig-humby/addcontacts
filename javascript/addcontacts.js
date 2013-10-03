@@ -1,6 +1,6 @@
 window.onload=function()
 {
-		document.addEventListener("deviceready"), onDeviceReady, false);
+	document.addEventListener("deviceready"), onDeviceReady, false);
 }
 
 function onDeviceReady()
@@ -8,13 +8,28 @@ function onDeviceReady()
 //EMPTY
 }
 
+function alert()
+{
+	navigator.notification.alert(
+            'Hello there cheeky ;)',  // message
+            alertDismissed,         // callback
+            'Success',            // title
+            'OK'                  // buttonName
+        );
+} 
+
+function alterDismissed()
+{
+//EMPTY	
+}
+
 function saveContact()
 {
-	var firstName = document.getElementById("first").value;
-	var lastName = document.getElementById("last").value;
-	var telephoneNumber = document.getElementById("number").value;
-	var phoneType = document.getElementById("type").value;
-	navigator.notification.alert("Hello there!");
+	//var firstName = document.getElementById("first").value;
+	//var lastName = document.getElementById("last").value;
+	//var telephoneNumber = document.getElementById("number").value;
+	//var phoneType = document.getElementById("type").value;
+	//navigator.notification.alert("Hello there!");
 	//var cntContact = navigator.contacts.create();
 	
 	//cntContact.name.givenName = firstName;
