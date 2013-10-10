@@ -1,25 +1,19 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>
-			Add contacts		
-		</title>
 		<script type="text/javascript" src="javascript/cordova-2.9.0.js"></script>
 		<script type="text/javascript" src="javascript/addcontacts.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/addcontact.css">
-		
+		<title>Add Contacts</title>
 		<div class="actionBar">
 			<img class="actionBarIcon" src="icon.png"/>Add Contacts
 		</div>
 	</head>
 	<body>
-		<form id="addContact">	
-			<label for="first">First</label><br/>
-			<input type="text" id="first"/><br/>
-			<label for="last">Last</label><br/>
-			<input type="text" id="last"/><br/>	
-			<label for="number">Mobile Number</label><br/>
-			<input type="tel" id="number"/><br/>
+		<form id="addContact"><br/>
+			<input type="text" id="first" placeholder="First Name"/><br/><br/>
+			<input type="text" id="last" placeholder="Last Name"/><br/><br/>
+			<input type="tel" id="number" placeholder="Phone Number"/><br/><br/>
 			<label for="type">Type</label><br/>
 			<select id="type">
 				<option value="Home">Home</option>

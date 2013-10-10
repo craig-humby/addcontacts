@@ -1,12 +1,30 @@
+body {
+	margin: 0px;
+}
+
+input {
+	border:none;	
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #D0D0D0;
+}
+
 .actionBar{
 	width: 100%;
-	height: 48px;
+	height: 56px;
 	margin:0 auto;
-	background-color: rgb(220, 220, 200);
+	background-color: #e4e4e4;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #D0D0D0;
+	font-size: large;
 	
 @font-face{
     font-family: "robotofont";
     src: url("res/fonts/Roboto-Regular.ttf") format("opentype");   
+    }
+    header{
+    	font-family: "robotofont";
     }
     body {
         font-family: "robotofont";
@@ -14,8 +32,8 @@
 }
 
 .actionBarIcon{
-	height:32px;
-	width: 32px;
+	height:40px;
+	width: 40px;
 	padding-right: 10px;
 	padding-left: 10px;
 	padding-top: 8px;
