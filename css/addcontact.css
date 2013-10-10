@@ -1,5 +1,13 @@
+html{
+	height: 100%;
+}
+
 body {
-	margin: 0px;
+	width:100%;
+	height:100%;
+	position:relative;
+	margin:0 auto;
+	background-color:#f2f2f2;
 }
 
 input {
@@ -7,7 +15,20 @@ input {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #D0D0D0;
+	width: 100%;
+	margin : 0 auto;
 }
+
+select {
+	border:none;	
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #D0D0D0;
+	width: 18%;
+	float: right;
+	margin : 0 auto;
+}
+
 
 input:focus {
 	border:none;	
@@ -26,17 +47,25 @@ input:focus {
 	border-bottom-style: solid;
 	border-bottom-color: #D0D0D0;
 	font-size: large;
-	
-@font-face{
-    font-family: "robotofont";
-    src: url("res/fonts/Roboto-Regular.ttf") format("opentype");   
-    }
-    header{
-    	font-family: "robotofont";
-    }
-    body {
-        font-family: "robotofont";
-    }	
+}
+
+button{
+	border:none;
+	background-color: #e4e4e4;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #D0D0D0;
+	font-style: bold;
+	font color: #D0D0D0;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.buttons{
+	padding-top: 10px;
+	text-align: center;
 }
 
 .actionBarIcon{
@@ -47,4 +76,16 @@ input:focus {
 	padding-top: 8px;
 	padding-bottom: 8px;
 	vertical-align: middle;
+}
+
+.main{
+	position:relative;
+	height:100%;
+	width:80%;
+	margin:0 auto;
+	background-color:white;
+	padding-top: 2%;
+	padding-top: 2%;
+	padding-left: 4%;
+	padding-right: 4%;
 }
