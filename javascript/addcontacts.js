@@ -1,54 +1,44 @@
-window.onload=function()
-{
-	document.addEventListener("deviceready"), onDeviceReady, false);
-}
+document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady()
 {
-//EMPTY
-}
-
-function alert()
-{
-	navigator.notification.alert(
-            'Hello there cheeky ;)',  // message
-            alertDismissed,         // callback
-            'Success',            // title
-            'OK'                  // buttonName
-        );
-} 
-
-function alterDismissed()
-{
-//EMPTY	
+	navigator.notification.alert("Device Ready", alertDismissed, 'Add Contacts', 'OK');
+	document.getElementById("btnSave").addEventListener("click", saveContact, false);
 }
 
 function saveContact()
 {
-	//var firstName = document.getElementById("first").value;
-	//var lastName = document.getElementById("last").value;
-	//var telephoneNumber = document.getElementById("number").value;
-	//var phoneType = document.getElementById("type").value;
-	//navigator.notification.alert("Hello there!");
-	//var cntContact = navigator.contacts.create();
+	var txtFirstName = document.getElementById("first").value;
+	var txtLastName = document.getElementById("last").value;
+	var intTelNum= document.getElementById("number").value;
+	var txtPhoneType = document.getElementById("type").value;	
+	var objContact = navigator.contacts.create();
+	objContact.displayName = txtFirstName + txtLastName;
+	var txtContactName = new ContactName();
+	txtContactName.givenName = txtFirstName;
+	txtContactName.familyName = txtLastName;
+	objContact.name = txtContactName; 
 	
-	//cntContact.name.givenName = firstName;
-	//cntContact.name.familyName = lastName;
 	//var phoneNumbers = [];
 	//phoneNumbers[0] = new ContactField(phoneType, telephoneNumber, false);
-	//cntContact.phoneNumbers = phoneNumbers;
+	//objContact.phoneNumbers = phoneNumbers;
 
-	//cntContact.save(onSaveSuccess,onSaveError);
+	objContact.save(onSaveSuccess,onSaveError);
 }
 	
 function onSaveSuccess(contact) 
 {
-    alert("Contact saved to address book.");
+    navigator.notification.alert("Contact saved to address book.", alertDismissed, 'Add Contacts', 'OK');
 }
  
 // onSaveError: Failed to get the contacts
 //
 function onSaveError(contactError) 
 {
-    alert("Error = " + contactError.code);
+    navigator.notification.alert("Error = " + contactError.code, alertDismissed, 'Add Contacts', 'OK');
+}
+
+function alertDismissed()
+{
+	//EMPTY	
 }

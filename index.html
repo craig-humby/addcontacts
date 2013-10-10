@@ -4,26 +4,26 @@
 		<title>
 			Add contacts		
 		</title>
-		<script type="text/javascript" src="javascript/cordova.js"></script>
+		<script type="text/javascript" src="javascript/cordova-2.9.0.js"></script>
 		<script type="text/javascript" src="javascript/addcontacts.js"></script>
+
 	</head>
 	<body>
-		<p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
 		<form id="addContact">	
 			<label for="first">First</label><br/>
-			<input type="text" for "first" /><br/>
+			<input type="text" id="first"/><br/>
 			<label for="last">Last</label><br/>
-			<input type="text" for="last"/><br/>	
+			<input type="text" id="last"/><br/>	
 			<label for="number">Mobile Number</label><br/>
-			<input type="tel" for="number"/><br/>
+			<input type="tel" id="number"/><br/>
 			<label for="type">Type</label><br/>
-			<select for="type">
+			<select id="type">
 				<option value="Home">Home</option>
 				<option value="Mobile">Mobile</option>
 				<option value="Work">Work</option>
 			</select><br />
 		</form>		
-		<button type="submit" form="addContact" id="btnSave" onclick="saveContact(); return false;">Save Contact</button>&emsp;
-		<button type="reset">Clear</button>	
+		<button id="btnSave" type="submit" form="addContact">Save</button>&emsp;
+		<button id="btnClear" type="reset" form="addContact">Clear</button>	
 	</body>
 </html>

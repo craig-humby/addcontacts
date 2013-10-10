@@ -4181,7 +4181,7 @@ define("cordova/plugin/android/promptbasednativeapi", function(require, exports,
 
 module.exports = {
     exec: function(service, action, callbackId, argsJson) {
-        return prompt(argsJson, 'gap:'+JSON.stringify([service, action, callbackId]));
+        //return prompt(argsJson, 'gap:'+JSON.stringify([service, action, callbackId]));
     },
     setNativeToJsBridgeMode: function(value) {
         prompt(value, 'gap_bridge_mode:');
@@ -6909,7 +6909,7 @@ require('cordova/channel').onNativeReady.fire();
         } catch(err){
             finishPluginLoading();
         }
-    } 
+    } ;
 
 
     // Try to XHR the cordova_plugins.json file asynchronously.
