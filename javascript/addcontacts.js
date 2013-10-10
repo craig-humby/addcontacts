@@ -2,7 +2,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady()
 {
-	navigator.notification.alert("Device Ready", alertDismissed, 'Add Contacts', 'OK');
 	document.getElementById("btnSave").addEventListener("click", saveContact, false);
 }
 
@@ -18,10 +17,9 @@ function saveContact()
 	txtContactName.givenName = txtFirstName;
 	txtContactName.familyName = txtLastName;
 	objContact.name = txtContactName; 
-	
-	//var phoneNumbers = [];
-	//phoneNumbers[0] = new ContactField(phoneType, telephoneNumber, false);
-	//objContact.phoneNumbers = phoneNumbers;
+	var arrPhoneNumbers = [1];
+	phoneNumbers[0] = new ContactField(phoneType, telephoneNumber, false);
+	objContact.phoneNumbers = arrPhoneNumbers;
 
 	objContact.save(onSaveSuccess,onSaveError);
 }
