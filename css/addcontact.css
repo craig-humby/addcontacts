@@ -1,0 +1,24 @@
+.actionBar{
+	width: 100%;
+	height: 48px;
+	margin:0 auto;
+	background-color: rgb(220, 220, 200);
+	
+@font-face{
+    font-family: "robotofont";
+    src: url("res/fonts/Roboto-Regular.ttf") format("opentype");   
+    }
+    body {
+        font-family: "robotofont";
+    }	
+}
+
+.actionBarIcon{
+	height:32px;
+	width: 32px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	vertical-align: middle;
+}
