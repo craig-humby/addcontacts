@@ -9,7 +9,7 @@ function saveContact()
 {
 	var txtFirstName = document.getElementById("first").value;
 	var txtLastName = document.getElementById("last").value;
-	var intTelNum= document.getElementById("number").value;
+	var txtTelNum= document.getElementById("number").value;
 	var txtPhoneType = document.getElementById("type").value;	
 	var objContact = navigator.contacts.create();
 	objContact.displayName = txtFirstName + txtLastName;
@@ -17,8 +17,8 @@ function saveContact()
 	txtContactName.givenName = txtFirstName;
 	txtContactName.familyName = txtLastName;
 	objContact.name = txtContactName; 
-	var arrPhoneNumbers = [1];
-	phoneNumbers[0] = new ContactField(phoneType, telephoneNumber, false);
+	var arrPhoneNumbers = [];
+	arrPhoneNumbers[0] = new ContactField(txtPhoneType, txtTelNum, false);
 	objContact.phoneNumbers = arrPhoneNumbers;
 
 	objContact.save(onSaveSuccess,onSaveError);
